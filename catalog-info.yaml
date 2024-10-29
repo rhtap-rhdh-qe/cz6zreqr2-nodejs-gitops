@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cz6zreqr2-nodejs-gitops
+  description: This is GitOps manifest for cz6zreqr2-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: cz6zreqr2-nodejs
+    janus-idp.io/tekton: cz6zreqr2-nodejs
+    backstage.io/kubernetes-id: cz6zreqr2-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:cz6zreqr2-nodejs
